@@ -11,7 +11,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  width: 500px;
+  width: 750px;
   background-color: #fafafa;
   padding: 0px;
   box-shadow: 0 20px 30px 0 rgba(1, 1, 1, 0.07);
@@ -29,19 +29,9 @@ body {
   text-transform: uppercase;
   box-shadow: 0 -10px 10px 0 rgba(1, 1, 1, 0.05);
 }
-#footer #taskAdd {
-  transition: all 0.3s ease-in-out;
-  width: 3rem;
-  height: 3rem;
-  background: #3b44fb;
-  color: white;
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 300;
-  border-radius: 0.75rem;
-  border: 0;
-  outline: 0;
-  will-change: transform;
+.btn{
+  font-size: 30px;
+  padding: 1px 15px;
 }
 #footer #taskAdd:hover {
   background: #050fe5;
@@ -50,20 +40,11 @@ body {
 #footer #taskAdd:active {
    transform: scale(0.9);
 }
-#footer input#taskInput {
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  font-size: 1rem;
-  background: transparent;
-  width: calc(100% - 3rem - 5px);
-  border: none;
-}
 #footer input#taskInput:focus {
   outline: 0;
   border-color: white;
   color: #0d0d0d;
 }
-
 #tasks {
   padding: 1.5rem 2rem;
 }
@@ -88,6 +69,9 @@ body {
   letter-spacing: -.015rem;
   will-change: transform;
 }
+#footer .btn{
+  margin-left: 15px;
+}
 #tasks #tasksList li:hover {
   border-right: 55px solid red;
   transition: all 0.3s ease-in-out;
@@ -106,8 +90,11 @@ body {
   background: none;
   border: none;
   outline: 0;
-  line-height: .85rem;
+  line-height: normal;
   font-size: 1rem;
+}
+.delete span {
+  display: flex;justify-content: center;
 }
 #tasks #tasksList li .delete:hover {
   opacity: .75;
@@ -119,7 +106,18 @@ body {
   font-weight: 500;
   font-size: 1.25rem;
 }
-
+.done{
+  font-weight: 700;
+  font-family: Arial;
+  border: none;
+  color: #fff;
+  background: green;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 79px;
+  height: 100%;
+}
 
 @keyframes fadeIn {
   0% {
